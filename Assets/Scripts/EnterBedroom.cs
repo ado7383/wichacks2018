@@ -6,8 +6,11 @@ using UnityEngine;
 public class EnterBedroom : MonoBehaviour
 {
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        SceneManager.LoadScene("Scene1");
+        if( Input.GetKey(KeyCode.Space) )
+        {
+            SceneManager.LoadScene("Scene1");
+        }
     }
 }

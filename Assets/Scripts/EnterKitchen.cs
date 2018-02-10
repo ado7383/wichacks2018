@@ -5,8 +5,12 @@ using UnityEngine;
 
 public class EnterKitchen : MonoBehaviour {
     
-    private void OnTriggerEnter2D(Collider2D collision)
+
+    private void OnTriggerStay2D(Collider2D collision)
     {
-        SceneManager.LoadScene("Kitchen");
+        if (Input.GetKey(KeyCode.Space))
+        {
+            SceneManager.LoadScene("Kitchen");
+        }
     }
 }
