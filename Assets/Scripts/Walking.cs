@@ -6,12 +6,12 @@ public class Walking : MonoBehaviour {
 Rigidbody2D m_Rigidbody;
 SpriteRenderer m_SpriteRenderer;
 float m_Speed;
+    private bool initialize;
 	// Use this for initialization
 	void Start () {
 		m_Rigidbody = GetComponent<Rigidbody2D>();
 		m_SpriteRenderer = GetComponent<SpriteRenderer>();
 		m_Speed = 10.0f;
-
 	}
 
 	// Update is called once per frame
@@ -24,4 +24,5 @@ float m_Speed;
 			m_SpriteRenderer.flipX = false;
 		}
 	}
+    
 }
