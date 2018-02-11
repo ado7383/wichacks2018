@@ -12,7 +12,7 @@ public class Track : MonoBehaviour {
 
     private void Awake()
     {
-        sleep = true;
+        sleep = false;
         day = 0;
         DontDestroyOnLoad(gameObject);
         SceneManager.sceneLoaded += CheckScene;
