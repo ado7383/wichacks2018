@@ -24,5 +24,14 @@ float m_Speed;
 			m_SpriteRenderer.flipX = false;
 		}
 	}
-    
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Wall"))
+        {
+            Debug.Log("Hit Wall");
+            m_Speed = 0;
+        }
+    }
+
 }
