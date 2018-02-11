@@ -5,18 +5,22 @@ using UnityEngine;
 
 public class Track : MonoBehaviour {
 
+    public int day;
     public Scene currentRoom;
     public string currentRoomName;
+    public bool sleep;
 
     private void Awake()
     {
-        Debug.Log("Awake");
+        sleep = true;
+        day = 0;
         DontDestroyOnLoad(gameObject);
         SceneManager.sceneLoaded += CheckScene;
     }
 
     void CheckScene(Scene scene, LoadSceneMode mode)
     {
+        Debug.Log(scene.name);
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         GameObject camera = GameObject.FindGameObjectWithTag("MainCamera");
         if (currentRoomName == "LivingRoom" && scene.name == "Hallway")

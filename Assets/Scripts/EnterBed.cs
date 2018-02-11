@@ -3,9 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnterBed : MonoBehaviour {
-	private void OnTriggerStay2D(Collider2D collision){
+    
+    private void OnTriggerStay2D(Collider2D collision){
 	if(Input.GetKey(KeyCode.Space)){
-		Debug.Log("we got it");
+        GameObject tracker = GameObject.FindGameObjectWithTag("Track");
+        Debug.Log(tracker.GetComponent<Track>().day);
+        if( tracker.GetComponent<Track>().sleep == true)
+            {
+                GameObject faded = GameObject.FindGameObjectWithTag("Fade");
+                faded.GetComponent<Animator>().enabled = true;
+                tracker.GetComponent<Track>().day++;
+                tracker.GetComponent<Track>().sleep = false;
+            }
 	}
 }
 }

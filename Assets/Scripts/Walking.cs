@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -55,6 +55,7 @@ bool canMoveRight;
       if(collision.gameObject.CompareTag("WallLeft")){
         canMoveLeft = true;
       }
+
     }
 
 }
