@@ -25,8 +25,9 @@ float m_Speed;
 		}
 	}
 
-    private void OnTriggerStay2D(Collider2D collision)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log(collision.gameObject.name);
         if (collision.gameObject.CompareTag("Wall"))
         {
             Debug.Log("Hit Wall");

@@ -6,8 +6,7 @@ public class FoodBowl : MonoBehaviour {
     public Sprite empty;
     public Sprite full;
     private SpriteRenderer spriteRenderer;
-
-    private bool fed;
+    
 	// Use this for initialization
 	void Start () {
         spriteRenderer = GetComponent<SpriteRenderer>();
@@ -17,10 +16,6 @@ public class FoodBowl : MonoBehaviour {
         }
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
     private void OnTriggerStay2D(Collider2D collision)
     {
