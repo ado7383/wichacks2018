@@ -10,7 +10,7 @@ public class EnterBed : MonoBehaviour {
         Debug.Log(tracker.GetComponent<Track>().day);
         if( tracker.GetComponent<Track>().sleep == true)
             {
-                GameObject faded = GameObject.FindGameObjectWithTag("Fade");
+                GameObject faded = GameObject.Find("BlackFade");
                 faded.GetComponent<Animator>().enabled = true;
                 tracker.GetComponent<Track>().day++;
                 tracker.GetComponent<Track>().sleep = false;
