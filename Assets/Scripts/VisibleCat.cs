@@ -13,6 +13,7 @@ public class VisibleCat : MonoBehaviour {
             if(tracker.GetComponent<Track>().day == i)
             {
                 this.gameObject.SetActive(false);
+                tracker.GetComponent<Track>().fed = true;
             }
         }
 	}

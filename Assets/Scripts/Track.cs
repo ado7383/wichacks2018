@@ -10,6 +10,7 @@ public class Track : MonoBehaviour {
     public string currentRoomName;
     public bool sleep;
     public bool lastDayReady;
+    public bool fed;
 
     private void Awake()
     {
@@ -18,11 +19,11 @@ public class Track : MonoBehaviour {
         DontDestroyOnLoad(gameObject);
         SceneManager.sceneLoaded += CheckScene;
         lastDayReady = false;
+        fed = false;
     }
 
     void CheckScene(Scene scene, LoadSceneMode mode)
     {
-        Debug.Log(scene.name);
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         GameObject camera = GameObject.FindGameObjectWithTag("MainCamera");
         if (currentRoomName == "LivingRoom" && scene.name == "Hallway")

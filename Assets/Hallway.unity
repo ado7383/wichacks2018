@@ -424,7 +424,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 238248384}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -56.48, y: -7.27, z: -0.42949983}
+  m_LocalPosition: {x: -54.6, y: -7.27, z: -0.42949983}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1127,7 +1127,7 @@ MonoBehaviour:
   player: {fileID: 807787240}
   offset: {x: 0, y: 0, z: -6}
   Minimum: {x: -28, y: 0}
-  Maximum: {x: 27, y: 0}
+  Maximum: {x: 29.2, y: 0}
 --- !u!81 &1050818905
 AudioListener:
   m_ObjectHideFlags: 0
