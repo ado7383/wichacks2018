@@ -16,7 +16,7 @@ float m_Speed;
 
 	// Update is called once per frame
 	void Update () {
-		m_Speed = 10 * Input.GetAxis("Horizontal");
+		m_Speed = 20 * Input.GetAxis("Horizontal");
 		m_Rigidbody.velocity = transform.right * m_Speed;
 		if( m_Speed < 0){
 			m_SpriteRenderer.flipX = true;
