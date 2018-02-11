@@ -9,6 +9,7 @@ public class Track : MonoBehaviour {
     public Scene currentRoom;
     public string currentRoomName;
     public bool sleep;
+    public bool lastDayReady;
 
     private void Awake()
     {
@@ -16,6 +17,7 @@ public class Track : MonoBehaviour {
         day = 0;
         DontDestroyOnLoad(gameObject);
         SceneManager.sceneLoaded += CheckScene;
+        lastDayReady = false;
     }
 
     void CheckScene(Scene scene, LoadSceneMode mode)
@@ -49,6 +51,10 @@ public class Track : MonoBehaviour {
         {
             camera.transform.position = new Vector3( 0, 0, -10);
             player.transform.position = new Vector2(0, 0);
+        }
+        else if( currentRoomName == "Kitchen" && scene.name == "Scene1" && day == 11)
+        {
+            lastDayReady = true;
         }
         currentRoom = scene;
         currentRoomName = scene.name;
