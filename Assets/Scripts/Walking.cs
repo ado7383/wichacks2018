@@ -25,12 +25,12 @@ float m_Speed;
 		}
 	}
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerStay2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Wall"))
         {
             Debug.Log("Hit Wall");
-            m_Speed = 0;
+            m_Rigidbody.velocity = Vector2.zero;
         }
     }
 

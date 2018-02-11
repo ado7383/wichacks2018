@@ -12,7 +12,7 @@ public class FollowPlayer : MonoBehaviour {
     {
         if (!(player.transform.position.x <= Minimum.x) && !(player.transform.position.x >= Maximum.x))
         {
-            transform.position = new Vector3(player.transform.position.x + offset.x, player.transform.position.y + offset.y, offset.z);
+            transform.position = new Vector3(player.transform.position.x + offset.x, offset.y, offset.z);
         }
     }
 }
