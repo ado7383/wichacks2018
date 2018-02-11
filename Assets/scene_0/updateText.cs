@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 public class updateText : MonoBehaviour {
@@ -29,10 +30,10 @@ public class updateText : MonoBehaviour {
 	void Update () {
 	if (Input.GetMouseButtonDown(0)){
 		if(counter == dialogue.Length-1){
-			Debug.Log("we die tonight");
-		}	
+			SceneManager.LoadScene("Scene1");
+		}else{	
 		StartCoroutine("writeText");
-		
+		}
 	}
 }
 }
